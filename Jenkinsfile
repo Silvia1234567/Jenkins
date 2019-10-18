@@ -6,6 +6,7 @@ pipeline {
     }
     environment {
         CI = 'true'
+        Username = credentials('Username')
     }
     stages {
         stage('Build') {
