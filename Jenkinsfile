@@ -3,6 +3,7 @@ pipeline {
         docker {
             image 'node:12.4-alpine'
             args '-p 3000:3000'
+        
         }
     }
     environment {
