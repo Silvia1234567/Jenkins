@@ -8,6 +8,10 @@ app.get('/notok', (req, res) => res.json({ ok: false }))
 
 app.get('/username', (req, res) => res.json({ username: process.env.Username }))
 
+app.get('/usernamePassword', (req, res) => res.json({ 
+    usernamePassword: process.env.MONGODB_CREDENTIALS,
+    username: process.env.MONGODB_CREDENTIALS_USR
+    password: process.env.MONGODB_CREDENTIALS_PSW}))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
