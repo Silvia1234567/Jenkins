@@ -12,7 +12,7 @@ pipeline {
     }
     environment {
         CI = 'true'
-        MONGODB_CREDENTIALS = credentials('MONGODB_PASSWORD')
+        MONGODB_PASSWORD = credentials('MONGODB_PASSWORD')
     }
     stages {
         stage('Build') {
